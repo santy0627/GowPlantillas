@@ -1,17 +1,15 @@
 import React from 'react'
 import './catalogo.css'
-import Product from '../components/Products/Product'
+import Product from '../components/Products/Product.jsx'
+import { products } from '../products.js'
 
 export default function Catalogo () {
   return (
     <main className='catalogo'>
       <div className='products'>
-        <Product title='hola' description='esto es una prueba para la pagina' />
-        <Product title='hola' description='esto es una prueba para la pagina' />
-        <Product title='hola' description='esto es una prueba para la pagina' />
-        <Product title='hola' description='esto es una prueba para la pagina' />
-        <Product title='hola' description='esto es una prueba para la pagina' />
-        <Product title='hola' description='esto es una prueba para la pagina' />
+        {products && products.map(product =>
+          <Product key={product.id} title={product.title} description={product.description} />
+        )}
       </div>
     </main>
   )
