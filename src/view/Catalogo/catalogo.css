@@ -1,4 +1,17 @@
 .catalogo{
   width: 100%;
   height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.products{
+  display: grid;
+  grid-template-columns: 700px 700px;
+  gap: 50px;
+  padding: 30px;
+  overflow: auto;
+  height: 85vh;
 }
